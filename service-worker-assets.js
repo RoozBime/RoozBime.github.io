@@ -129,7 +129,7 @@
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-RREJFmz54W7Y10ccJozC2\/9bueiy0TUlAFnzUtNgWXg=",
+      "hash": "sha256-Cgdy8Dsy\/IR9lZ35uGWZmPZOza2l8CjvZP75EYpIejg=",
       "url": ".gitattributes"
     },
     {
@@ -405,5 +405,5 @@
       "url": "sitemap.xml"
     }
   ],
-  "version": "GAnvxTzM"
+  "version": "Kf30yq1j"
 };
