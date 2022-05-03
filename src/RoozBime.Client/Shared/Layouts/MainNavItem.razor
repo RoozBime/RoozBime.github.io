@@ -1,0 +1,22 @@
+﻿<NavLink class="flex flex-col md:flex-row items-center justify-center md:rounded md:shadow md:bg-blue-700 ml-0 md:ml-1 px-1 py-1 flex-1 md:flex-initial"
+         ActiveClass="bg-blue-600 md:bg-blue-600 md:-ml-0"
+         Match="NavLinkMatch.All"
+         href="@Href"
+         @onclick="OnClick">
+    <i class="@Icon px-3 y-2 text-2xl"></i>
+    <span class="md:py-2 md:pb-0 md:text-xl pl-3 pr-3 md:pr-0">@Text</span>
+</NavLink>
+
+@code {
+    [Parameter]
+    public string Icon { get; set; } = default!;
+
+    [Parameter]
+    public string Text { get; set; } = default!;
+
+    [Parameter]
+    public string Href { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+}

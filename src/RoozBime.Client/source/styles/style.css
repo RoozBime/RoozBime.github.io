@@ -1,0 +1,11 @@
+﻿@import "~vazir-font/dist/font-face.css";
+@import "~sahel-font/dist/font-face.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.font-vazir {
+    font-family: 'Vazir', sans-serif;
+}
+
+.font-sahel {
+    font-family: 'Sahel', sans-serif;
+}

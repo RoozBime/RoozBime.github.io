@@ -1,0 +1,37 @@
+﻿{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "module": "ESNext",
+        "target": "ES5",
+        "jsx": "preserve",
+        "importHelpers": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node",
+        "noEmitOnError": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "esModuleInterop": true,
+        "lib": [
+            "DOM",
+            "ESNext"
+        ]
+    },
+    "compileOnSave": true,
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS",
+            "target": "ES5",
+            "esModuleInterop": true
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "webpack.config.ts",
+        "Publish"
+    ]
+}

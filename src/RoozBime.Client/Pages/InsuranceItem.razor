@@ -1,0 +1,28 @@
+﻿<a @attributes="AdditionalAttributes"
+   @onclick="OnClick"
+   href="@Href"
+   class="flex flex-col flex-grow justify-center items-center text-white rounded shadow min-w-[10rem] hover: @Class @(AdditionalAttributes?.GetValueOrDefault("class",""))">
+    <i class="@Icon px-6 py-6 fa-3x"></i>
+    <span class="pb-3 pl-3 pr-3 text-center font-500 text-2xl">@Text</span>
+</a>
+
+@code {
+    [Parameter]
+    public string Icon { get; set; } = default!;
+
+    [Parameter]
+    public string Text { get; set; } = default!;
+
+    [Parameter]
+    public string Href { get; set; } = default!;
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+
+}
