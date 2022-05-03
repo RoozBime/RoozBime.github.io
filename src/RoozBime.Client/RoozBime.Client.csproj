@@ -33,7 +33,7 @@
 	</ItemGroup>
 
 	<Target Name="npm-publish" BeforeTargets="Publish">
-		<Exec Command="npm run publish" WorkingDirectory="./src/RoozBime.Client" />
+		<Exec Command="npm run publish" />
 	</Target>
 
 	<ItemGroup>
