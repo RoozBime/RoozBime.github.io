@@ -129,7 +129,7 @@
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-Blr\/kD3xLUZ6Djsuo6irs+kjkaTLzEvFl+\/vRDk28vU=",
+      "hash": "sha256-mQ6WEr9uPpgy03LKjwjHQ1kb6mTVCkDjf1ElOdWXbC8=",
       "url": ".gitattributes"
     },
     {
@@ -205,7 +205,7 @@
       "url": "images\/sme.png"
     },
     {
-      "hash": "sha256-RXMBlBC\/pzLfEhWC+GZNFX0j+tq3gfViAREfVd18oMM=",
+      "hash": "sha256-JQmb1RrJBBDTr8C0sz4Pby5PNzgrIsKZoO3HQvbEUNE=",
       "url": "index.html"
     },
     {
@@ -405,5 +405,5 @@
       "url": "sitemap.xml"
     }
   ],
-  "version": "Ez8PT9wV"
+  "version": "oI7JvHIT"
 };
