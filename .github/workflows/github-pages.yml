@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
     steps:
@@ -17,25 +17,21 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+
     - name: Add workload
       run: dotnet workload install wasm-tools
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build -c Release --no-restore
+
     - name: Publish 
       run: dotnet publish -o ./publish -c Release
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}/publish/wwwroot:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-    - uses: actions/cache@v2
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - uses: helaili/jekyll-action@2.0.5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: ./publish
