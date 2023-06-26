@@ -1,8 +1,4 @@
 * -delta
 * binary
-dev/* -delta
-dev/* binary
-lib/* -delta
-lib/* binary
-_framework/* -delta
-_framework/* binary
+**/* -delta
+**/* binary
